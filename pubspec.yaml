@@ -88,3 +88,7 @@ fonts:
       # asset: assets/fonts/Lato-LightItalic.ttf
       # asset: assets/fonts/Lato-Thin.ttf
       # asset: assets/fonts/Lato-ThinItalic.ttf
+
+
+assets:
+   - assets/images/persona1.jpg
