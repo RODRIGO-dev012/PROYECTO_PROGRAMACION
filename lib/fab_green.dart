@@ -32,7 +32,7 @@ class _FabGreen extends State <FabGreen> {
       child: Icon(
         _fabIcon
       ),
-      onPressed: ,
+      onPressed: onPressedFav,
     );
     return fabGreen;
   }
