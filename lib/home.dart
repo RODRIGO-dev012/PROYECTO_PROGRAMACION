@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'description_place.dart';
 
 class MyHome extends StatelessWidget{
   @override
@@ -10,11 +11,7 @@ class MyHome extends StatelessWidget{
           "My places"
         ),
       ),
-      body: Center(
-        child: Text(
-          "My places"
-        ),
-      ),
+      body: Description_place()
     );
   }
 }
