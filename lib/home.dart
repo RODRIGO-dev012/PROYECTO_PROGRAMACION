@@ -1,7 +1,4 @@
-
 import 'package:flutter/material.dart';
-import 'package:proyecto_flutter_progra/review_list.dart';
-
 import 'description_place.dart';
 
 class MyHome extends StatelessWidget{
@@ -42,7 +39,7 @@ class MyHome extends StatelessWidget{
       ),
       body: Stack(
         children: <Widget>[
-          listView
+          HomeAppBar("Popular")
         ],
       )
     );

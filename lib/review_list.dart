@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto_flutter_progra/review.dart';
 class ReviewList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
