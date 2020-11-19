@@ -8,7 +8,6 @@ class DescriptionPlace extends StatelessWidget{
   String textoDescripcion;
 
   DescriptionPlace(this.Textotitulo, this.cantidadEstrellas, this.textoDescripcion);
-
   @override
   Widget build(BuildContext context){
     final titulo = Container(
