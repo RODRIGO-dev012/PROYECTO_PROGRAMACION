@@ -16,6 +16,7 @@ class Review extends StatelessWidget{
   Widget build(BuildContext context) {
     final foto = Container(
       margin: EdgeInsets.only(
+        top: 10,
         right: 10,
       ),
       height: 90,
