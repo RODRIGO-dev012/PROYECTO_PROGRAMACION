@@ -1,74 +1,82 @@
 import 'package:flutter/material.dart';
 
-class Description_place extends StatelessWidget{
+class DescriptionPlace extends StatelessWidget{
+  //variables
+  String Textotitulo;
+  int cantidadEstrellas;
+  String textoDescripcion;
+
+  DescriptionPlace(this.Textotitulo, this.cantidadEstrellas, this.textoDescripcion);
 
   @override
   Widget build(BuildContext context){
     final titulo = Container(
-      margin: EdgeInsets.only(
-        top: 260,
-        left: 20,
-        right: 28
-      ),
       child: Text(
-        "Dowili Ella",
+        Textotitulo,
         style: TextStyle(
-            fontSize: 36,
-            fontWeight: FontWeight.w900
-
+            fontSize: 38,
+            fontWeight: FontWeight.bold
         ),
       ),
     );
     final estrella = Container(
       margin: EdgeInsets.only(
-          top: 262,
-          left: 8
+        right: 5,
       ),
       child: Icon(
         Icons.star,
         color: Colors.amber,
       ),
     );
-    final estrellaBorder = Container(
+    final estrellaBorde = Container(
       margin: EdgeInsets.only(
-          top: 262,
-          left: 8
+          right: 5
       ),
       child: Icon(
         Icons.star_border,
         color: Colors.black26,
       ),
     );
-    final estrellas = Row(
-      children: [
-        estrella,
-        estrella,
-        estrella,
-        estrella,
-        estrellaBorder,
-      ],
+
+
+    //fila estrellas
+    List<Container> estrellas =new List();
+    for(int i = 0 ; i < 5 ; i++){
+      if(i < cantidadEstrellas){
+        estrellas.add(estrella);
+      }else{
+        estrellas.add(estrellaBorde);
+      }
+    }
+    final filaEstrellas = Row(
+      children:
+        estrellas,
     );
-    final header = Row(
+    final finaltitulo = Row(
       children: [
         titulo,
-        estrellas
+        filaEstrellas
       ],
     );
-    final description = Container(
-      margin: EdgeInsets.all(20),
+    final descripcion = Container(
+      margin: EdgeInsets.only(
+        top: 8,
+      ),
       child: Text(
-        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen..",
+        textoDescripcion,
         style: TextStyle(
       fontSize: 18,
           color: Colors.black54
         ),
       ),
     );
-    return Column(
-      children: [
-        header,
-        description
+    final descriptionPlace = Column(
+      children: <Widget>[
+        finaltitulo,
+        descripcion
       ],
     );
+
+    return descriptionPlace;
   }
 }
